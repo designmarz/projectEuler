@@ -19,7 +19,7 @@ function numCheck(num) {
 }
 
 
-// Even Fibonacci Numbers //
+// Even Fibonacci Numbers - Adds up all even Fib numbers up to a total value cap //
 
 var evenFibsSum = function(num, cap) {
 	var fibArray = []
