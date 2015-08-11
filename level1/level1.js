@@ -58,15 +58,19 @@ var evenFibsSum = function(num, cap) {
 
 
 // 3
-// Largest prime factor //
+// Largest prime factor // What is the largest prime factor of the number 600851475143?
 // https://www.khanacademy.org/math/pre-algebra/factors-multiples/prime_factorization/v/prime-factorization-exercise //
 
-// Build function of prime factor tree
+var targetPrime = 600851475143;
 
-// 100 / {2} = 50 (not prime),
-//  50 / {2} = 25 (not prime),
-//  25 / {5} = {5} (prime)
-// 		  ^ as 2 and 3 don't divide evenly) etc etc.
+var primeFactor = function(n) {
+
+// Build function of prime factor tree
+	// 100 / {2} = 50 (not prime),
+	//  50 / {2} = 25 (not prime),
+	//  25 / {5} = {5} (prime)
+	// 		  ^ as 2 and 3 don't divide evenly) etc etc.
+}
 
 
 
