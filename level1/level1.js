@@ -63,10 +63,8 @@ var primeFactor = function(n) {
 	};
 
 	for (var i = 0; i < starterArray.length; i++) {
-
 		// move first index to controlNum to use for compairison
 		var controlNum = starterArray.splice(0, 1)
-
 			// inner loop that check to see if an of the numbers
 			// are divisible by the control. //
 			for (var j = 0; j < starterArray.length; j++) {
@@ -78,21 +76,19 @@ var primeFactor = function(n) {
 					var pos = starterArray.indexOf(starterArray[j])
 					notPrime.push(starterArray.splice(pos, 1))
 				};
-
 				// resets loop if starter array is not empty //
 				if (starterArray.length !== 0){
 					i = -1;
 				}
 			};
-
 			// moves controlNum into isPrime, as this starts on a prime number 
 			// this should always end up being a prime number
-		isPrime.push(controlNum);	
+		isPrime.push(parseInt(controlNum));	
 	};
-
 
 	console.log( "StarterArray " + starterArray);
 	console.log( "notPrime " + notPrime);
 	console.log( "isPrime " + isPrime);
+	return isPrime;
 }
 
