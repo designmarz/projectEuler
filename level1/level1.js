@@ -1,4 +1,14 @@
+// Simple ruduce loop for adding up array's //
+var reduce = function(arg) {
+	var total = 0;
+	for ( var i = 0; i < arg.length; i++ ){
+    	total += arg[i];
+	} return total;	
+};
 
+
+
+// 1
 // Find the sums from 0 upto a num(agument) of all the numbers divisible by 3 or 5 //
 function numCheck(num) {
 	var results = []
@@ -19,6 +29,7 @@ function numCheck(num) {
 }
 
 
+// 2
 // Even Fibonacci Numbers - Adds up all even Fib numbers up to a total value cap //
 
 var evenFibsSum = function(num, cap) {
@@ -43,16 +54,25 @@ var evenFibsSum = function(num, cap) {
 	return f;
 }
 
-var reduce = function(arg) {
-	var total = 0;
-	for ( var i = 0; i < arg.length; i++ ){
-    	total += arg[i];
-	} return total;	
-};
 
 
+
+// 3
 // Largest prime factor //
-var primeFactor = function(n) {
+// https://www.khanacademy.org/math/pre-algebra/factors-multiples/prime_factorization/v/prime-factorization-exercise //
+
+// Build function of prime factor tree
+
+// 100 / {2} = 50 (not prime),
+//  50 / {2} = 25 (not prime),
+//  25 / {5} = {5} (prime)
+// 		  ^ as 2 and 3 don't divide evenly) etc etc.
+
+
+
+
+// Builds an array of prime numbers up to n //
+var primeGen = function(n) {
 	var starterArray = []
 	var notPrime = [];
 	var isPrime = [];
