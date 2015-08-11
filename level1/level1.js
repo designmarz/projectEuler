@@ -49,3 +49,50 @@ var reduce = function(arg) {
     	total += arg[i];
 	} return total;	
 };
+
+
+// Largest prime factor //
+var primeFactor = function(n) {
+	var starterArray = []
+	var notPrime = [];
+	var isPrime = [];
+
+// Build an array of all the numbers upto n //
+	for (var i = 2; i <= n; i++) {
+		starterArray.push(i);
+	};
+
+	for (var i = 0; i < starterArray.length; i++) {
+
+		// move first index to controlNum to use for compairison
+		var controlNum = starterArray.splice(0, 1)
+
+			// inner loop that check to see if an of the numbers
+			// are divisible by the control. //
+			for (var j = 0; j < starterArray.length; j++) {
+				// if j is divisible by the control remove from starter array
+				// and push into notPrime array //
+				if ( starterArray[j] % controlNum == 0) {
+					console.log('If check passed!')
+					console.log(starterArray[j])
+					var pos = starterArray.indexOf(starterArray[j])
+					notPrime.push(starterArray.splice(pos, 1))
+				};
+
+				// resets loop if starter array is not empty //
+				if (starterArray.length !== 0){
+					i = -1;
+				}
+			};
+
+			// moves controlNum into isPrime, as this starts on a prime number 
+			// this should always end up being a prime number
+		isPrime.push(controlNum);	
+	};
+
+
+	console.log( "StarterArray " + starterArray);
+	console.log( "notPrime " + notPrime);
+	console.log( "isPrime " + isPrime);
+}
+
